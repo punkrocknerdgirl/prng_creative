@@ -103,14 +103,15 @@ function WhatLivesHere() {
 
 function FieldNotes() {
   const notes = [
-    ['Ed / AI systems', 'Ed is a personal AI wrangler built to run my work life — not a chatbot, a system. Connected to everything, knows what I\'m supposed to be doing. Still training.', 'build-log · in progress'],
-    ['old lady tech', 'Spent two hours trying to get AI to do something useful and one hour explaining why it didn\'t. Ratio improving weekly. The trick is specificity, not prompting magic.', 'field-note · workflow'],
-    ['systems thinking', 'Every messy workflow I\'ve ever fixed started as someone\'s perfectly reasonable workaround for a thing that didn\'t work. Document the workaround before you kill it.', 'principle · cleanup'],
-    ['Diane / automation', 'Trucking tickets are structurally simple but operationally chaotic. Diane exists because I got tired of watching that chaos eat someone\'s billing cycle every week.', 'build-log · active'],
+    ['2026-06-27 · PRNG Creative', 'Stood up the PRNG Creative repo as the public design-system and workshop home: brand tokens, component examples, UI kits, and the first real notebook cleanup.', 'build-log · site setup'],
+    ['2026-06-26 · Git cleanup', 'Learned the hard way that the parent projects folder should not be its own Git repo when each project folder needs clean, separate history. Moved the accidental parent .git aside.', 'build-log · repo hygiene'],
+    ['2026-06-26 · Diane', 'Connected Project Diane to GitHub after resolving the remote readme conflict. Kept the real local README, merged the unrelated starter history, and got main clean.', 'build-log · project diane'],
+    ['2026-06-26 · Ed', 'Initialized Project Ed safely by writing the ignore rules first, keeping secret-bearing test/config files out of Git, then committing only the local caller docs and safe starter files.', 'build-log · safe commit'],
+    ['2026-06-26 · PRNG Books', 'Split public bookkeeping web work from client-facing pages: prng_books stays clean and public, while quotes, estimates, and report links move into a separate client repo.', 'build-log · repo split'],
   ];
   return (
     <ZineSection bg="var(--prng-plum-dark)" eyebrow="recent captures" heading="From the notebook"
-      headingColor="#fff" bodyColor="rgba(255,255,255,0.5)" body="Sample field notes. Real ones coming soon.">
+      headingColor="#fff" bodyColor="rgba(255,255,255,0.5)" body="Real build notes from the last two work sessions. Repo cleanup, project splits, and the first pass at this workshop site.">
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))', gap: 1, border: '1px solid rgba(201,83,140,0.2)' }}>
         {notes.map(([tag, body, meta]) => (
           <div key={tag} style={{ background: 'rgba(255,255,255,0.03)', padding: '1.5rem' }}>
