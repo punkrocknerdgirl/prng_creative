@@ -1,0 +1,89 @@
+/* ============================================================
+   PRNG — COLOR TOKENS
+   Brand core (plum/pink/blush) + functional "working palette"
+   for data, reports, charts, and status. base values first,
+   then semantic aliases.
+   ============================================================ */
+
+:root {
+  /* ---- BRAND CORE -------------------------------------- */
+  --prng-pink:        #C9538C;  /* primary brand accent */
+  --prng-pink-deep:   #B0437A;  /* hover / pressed pink  */
+  --prng-plum:        #5C1F3B;  /* deep brand plum       */
+  --prng-plum-dark:   #3A1025;  /* darker plum panels    */
+  --prng-ink:         #1A0A12;  /* near-black brand ink  */
+  --prng-text:        #2D0E1E;  /* default body text     */
+  --prng-muted:       #7A5068;  /* muted plum-grey text  */
+
+  --prng-blush:       #F5D6E8;  /* blush surface         */
+  --prng-blush-light: #FAEAF3;  /* lightest blush wash   */
+  --prng-blush-mid:   #F0D0E4;  /* blush border / chip   */
+  --prng-white:       #FFFFFF;
+
+  /* hairline rules over light / dark */
+  --prng-rule:        rgba(92, 31, 59, 0.18);
+  --prng-rule-on-dark:rgba(201, 83, 140, 0.22);
+
+  /* ---- WORKING PALETTE (data / charts / categories) ---- */
+  --wp-teal:          #2CA6A4;
+  --wp-teal-bright:   #4BC0C0;
+  --wp-teal-soft:     #76D7C4;
+
+  --wp-purple:        #6B5B95;
+  --wp-purple-mid:    #8E7CC3;
+  --wp-purple-soft:   #B4A7D6;
+
+  --wp-amber:         #F39C12;
+  --wp-orange:        #E67E22;
+  --wp-orange-soft:   #F4B183;
+
+  --wp-green:         #27AE60;
+  --wp-green-mid:     #60BD68;
+  --wp-green-soft:    #82E0AA;
+
+  --wp-blue:          #2F75B5;
+  --wp-blue-soft:     #5B9BD5;
+
+  --wp-red:           #C0392B;  /* loss / negative (added) */
+  --wp-red-soft:      #E74C3C;
+
+  --wp-grey:          #7F8C8D;
+  --wp-grey-mid:      #B0B0B0;
+  --wp-grey-soft:     #D9D9D9;
+
+  /* ---- SEMANTIC ALIASES -------------------------------- */
+  --color-accent:        var(--prng-pink);
+  --color-accent-hover:  var(--prng-pink-deep);
+
+  --text-strong:    var(--prng-plum);
+  --text-body:      var(--prng-text);
+  --text-muted:     var(--prng-muted);
+  --text-on-dark:   rgba(255, 255, 255, 0.92);
+  --text-on-dark-muted: rgba(255, 255, 255, 0.55);
+
+  --surface-page:   var(--prng-white);
+  --surface-wash:   var(--prng-blush-light);
+  --surface-card:   var(--prng-white);
+  --surface-dark:   var(--prng-ink);
+  --surface-plum:   var(--prng-plum);
+
+  --border-card:    var(--prng-rule);
+  --border-chip:    var(--prng-blush-mid);
+
+  /* status / financial semantics */
+  --status-positive: var(--wp-green);
+  --status-negative: var(--wp-red);
+  --status-warning:  var(--wp-amber);
+  --status-info:     var(--wp-blue);
+  --status-neutral:  var(--wp-grey);
+
+  /* categorical sequence for charts (ordered) */
+  --cat-1: var(--wp-teal);
+  --cat-2: var(--wp-purple);
+  --cat-3: var(--wp-amber);
+  --cat-4: var(--wp-green);
+  --cat-5: var(--wp-blue);
+  --cat-6: var(--wp-orange);
+  --cat-7: var(--wp-purple-soft);
+  --cat-8: var(--wp-grey-mid);
+}

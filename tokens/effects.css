@@ -1,0 +1,36 @@
+/* ============================================================
+   PRNG — RADII, BORDERS, SHADOWS, MOTION
+   Sharp corners are the brand signature: 2px on buttons/labels,
+   4px on cards. The pink top-border accent recurs everywhere.
+   ============================================================ */
+
+:root {
+  /* ---- RADII (sharp!) --------------------------------- */
+  --radius-xs:   1px;   /* note tags        */
+  --radius-sm:   2px;   /* buttons, labels  */
+  --radius-md:   4px;   /* cards, panels    */
+  --radius-pill: 20px;  /* badges/pills     */
+  --radius-full: 50%;   /* avatars, dots    */
+
+  /* ---- BORDERS ---------------------------------------- */
+  --border-hairline: 1px solid var(--prng-rule);
+  --border-chip:     1px solid var(--prng-blush-mid);
+  --accent-bar:      3px solid var(--prng-pink);  /* signature top/left accent */
+
+  /* ---- SHADOWS (soft plum-tinted) --------------------- */
+  --shadow-sm: 0 2px 8px rgba(92, 31, 59, 0.06);
+  --shadow-md: 0 2px 10px rgba(92, 31, 59, 0.09);
+  --shadow-lg: 0 6px 22px rgba(92, 31, 59, 0.13);
+
+  /* ---- MOTION ----------------------------------------- */
+  --ease-out:   cubic-bezier(0.22, 1, 0.36, 1); /* @kind other */
+  --dur-fast:   0.15s; /* @kind other */
+  --dur-base:   0.2s; /* @kind other */
+  --lift:       translateY(-2px); /* @kind other */
+
+  /* ---- DECOR ------------------------------------------ */
+  /* zine graph-paper grid (use as background-image on dark panels) */
+  --grid-lines: linear-gradient(rgba(201,83,140,0.06) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(201,83,140,0.06) 1px, transparent 1px); /* @kind other */
+  --grid-size: 40px 40px;
+}

@@ -1,0 +1,60 @@
+<!-- @dsCard group="Components" viewport="700x320" name="Data — Stats, Tables, Status" subtitle="Financial callouts, line-item tables, status chips" -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<link rel="stylesheet" href="../../styles.css" />
+<style>
+  body { margin: 0; padding: 22px; background: var(--prng-blush-light); font-family: var(--font-sans); }
+  .lbl { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: .12em; text-transform: uppercase; color: var(--prng-muted); margin: 0 0 8px; }
+  .stats { display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 18px; }
+  .tags { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
+</style>
+</head>
+<body>
+  <div id="root"></div>
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+  <script src="../../_ds_bundle.js"></script>
+  <script type="text/babel">
+    const { StatCallout, StatusTag, DataTable } = window.PRNGDesignSystem_4a3ea3;
+    function Demo() {
+      return (
+        <div>
+          <p className="lbl">Stat callouts</p>
+          <div className="stats">
+            <StatCallout label="Operating Loss" value="-$331,046.92" sub="12 months" tone="negative" />
+            <StatCallout label="Gross Margin" value="80.7%" sub="healthy" tone="positive" />
+            <StatCallout label="Avg Monthly Loss" value="-$27,587.24" sub="before owner salary" tone="warning" />
+          </div>
+          <p className="lbl">Status tags</p>
+          <div className="tags">
+            <StatusTag status="active" />
+            <StatusTag status="building" />
+            <StatusTag status="parked" />
+            <StatusTag status="positive">Profit</StatusTag>
+            <StatusTag status="negative">Net Loss</StatusTag>
+            <StatusTag status="warning">Review</StatusTag>
+          </div>
+          <p className="lbl">Data table</p>
+          <DataTable
+            columns={[
+              {key:'cat', label:'Expense Category'},
+              {key:'total', label:'12-Month Total', mono:true},
+              {key:'avg', label:'Monthly Avg', mono:true},
+            ]}
+            rows={[
+              {cat:'Payroll (wages + taxes)', total:'$241,867.64', avg:'$20,155.64'},
+              {cat:'Fuel (all vehicles)', total:'$85,227.06', avg:'$7,102.26'},
+              {cat:'Insurance (all types)', total:'$84,124.64', avg:'$7,010.39'},
+            ]}
+            totalRow={{cat:'Total Operating Expenses', total:'$781,939.47', avg:''}}
+          />
+        </div>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById('root')).render(<Demo />);
+  </script>
+</body>
+</html>

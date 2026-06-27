@@ -1,0 +1,59 @@
+/* ============================================================
+   PRNG — TYPOGRAPHY TOKENS
+   Roboto for everything functional; heavy weights (900/700) for
+   headlines (marketing). Roboto Mono for eyebrows, labels, code,
+   data. Playfair Display italic ONLY for the workshop/zine voice.
+   ============================================================ */
+
+:root {
+  /* ---- FAMILIES --------------------------------------- */
+  --font-sans:    'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono:    'Roboto Mono', 'SFMono-Regular', Menlo, monospace;
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+
+  /* ---- WEIGHTS ---------------------------------------- */
+  --weight-light:   300;
+  --weight-regular: 400;
+  --weight-medium:  500;
+  --weight-bold:    700;
+  --weight-black:   900;
+
+  /* ---- TYPE SCALE (rem) ------------------------------- */
+  --text-2xs: 0.62rem;   /* micro mono labels        */
+  --text-xs:  0.70rem;   /* eyebrows, pills          */
+  --text-sm:  0.82rem;   /* nav, captions, fine print*/
+  --text-md:  0.95rem;   /* body                     */
+  --text-lg:  1.05rem;   /* lead paragraph           */
+  --text-xl:  1.4rem;    /* card titles              */
+  --text-2xl: 1.95rem;   /* section titles           */
+  --text-3xl: 2.5rem;    /* hero / display           */
+  --text-4xl: 3.4rem;    /* big zine display         */
+
+  /* ---- LINE HEIGHT ------------------------------------ */
+  --leading-tight:  1.1;
+  --leading-snug:   1.25;
+  --leading-normal: 1.5;
+  --leading-relaxed:1.7;
+
+  /* ---- LETTER SPACING --------------------------------- */
+  --tracking-tight:  -0.01em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.08em;   /* uppercase labels   */
+  --tracking-wider:  0.14em;   /* mono eyebrows      */
+  --tracking-widest: 0.2em;    /* spaced section tag */
+
+  /* ---- SEMANTIC ROLES --------------------------------- */
+  --role-eyebrow-font:    var(--font-mono);
+  --role-eyebrow-size:    var(--text-xs);
+  --role-eyebrow-track:   var(--tracking-widest);
+
+  --role-display-font:    var(--font-sans);    /* marketing headlines */
+  --role-display-weight:  var(--weight-black);
+
+  --role-zine-font:       var(--font-display); /* workshop headlines  */
+  --role-zine-style:      italic; /* @kind other */
+
+  --role-body-font:       var(--font-sans);
+  --role-body-size:       var(--text-md);
+  --role-body-leading:    var(--leading-relaxed);
+}

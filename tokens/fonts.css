@@ -1,0 +1,9 @@
+/* ============================================================
+   PRNG — WEBFONTS
+   Roboto (sans, 300–900), Roboto Mono (400/600), and
+   Playfair Display italic (700) for the workshop/zine display.
+   All three are Google Fonts; loaded via Google's CSS API.
+   Fallbacks: Helvetica/Arial for sans, Georgia for display.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400&family=Roboto+Mono:wght@400;600&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
