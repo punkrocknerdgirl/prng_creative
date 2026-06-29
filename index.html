@@ -378,6 +378,64 @@
       max-width: 560px;
     }
 
+    /* -- GITHUB SHELF ------------------------------------------------ */
+    .github-section { background: #fff; }
+
+    .repo-shelf {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .repo-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 190px;
+      border: 1px solid var(--rule);
+      border-top: 3px solid var(--pink);
+      padding: 1.35rem;
+      color: inherit;
+      text-decoration: none;
+      background: linear-gradient(135deg, rgba(250,234,243,0.78), rgba(255,255,255,0.92));
+      transition: transform 0.15s, border-color 0.15s;
+    }
+
+    .repo-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(201,83,140,0.45);
+    }
+
+    .repo-label {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin-bottom: 0.55rem;
+    }
+
+    .repo-card h3 {
+      font-size: 1rem;
+      color: var(--plum);
+      margin-bottom: 0.45rem;
+    }
+
+    .repo-card p {
+      font-size: 0.835rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    .repo-link {
+      font-family: var(--mono);
+      font-size: 0.67rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--plum);
+      margin-top: 1.1rem;
+    }
+
     /* ── ABOUT STRIP ──────────────────────────────────────────── */
     .about-section {
       background: #fff;
@@ -508,6 +566,7 @@
     <nav>
       <a href="#what">What's here</a>
       <a href="#projects">Projects</a>
+      <a href="#github">GitHub</a>
       <a href="#about">About</a>
       <a href="https://prngbooks.com" class="cta">Hire me →</a>
     </nav>
@@ -663,6 +722,61 @@
 
   <hr class="rule" />
 
+  <!-- GITHUB SHELF -->
+  <section class="github-section" id="github">
+    <div class="section-inner">
+      <p class="section-eyebrow">// github shelf</p>
+      <h2 class="section-heading">Public repos from the workbench</h2>
+      <p class="section-body">
+        The public-facing code shelf: experiments, utility builds, site work, and systems that escaped the notebook long enough to get a commit history.
+      </p>
+      <div class="repo-shelf">
+        <a class="repo-card" href="https://github.com/punkrocknerdgirl/prng_creative">
+          <div>
+            <p class="repo-label">website · design system</p>
+            <h3>prng_creative</h3>
+            <p>Punk Rock Nerd Girl creative website and the PRNG design-system playground.</p>
+          </div>
+          <span class="repo-link">Open repo →</span>
+        </a>
+        <a class="repo-card" href="https://github.com/punkrocknerdgirl/diane">
+          <div>
+            <p class="repo-label">trucking · automation</p>
+            <h3>diane</h3>
+            <p>Project Diane: trucking ticketing, OCR, and invoicing pipeline work.</p>
+          </div>
+          <span class="repo-link">Open repo →</span>
+        </a>
+        <a class="repo-card" href="https://github.com/punkrocknerdgirl/ed">
+          <div>
+            <p class="repo-label">assistant · systems</p>
+            <h3>ed</h3>
+            <p>Personal assistant infrastructure for wrangling work, notes, and operational chaos.</p>
+          </div>
+          <span class="repo-link">Open repo →</span>
+        </a>
+        <a class="repo-card" href="https://github.com/punkrocknerdgirl/antihub">
+          <div>
+            <p class="repo-label">utility · qbo</p>
+            <h3>antihub</h3>
+            <p>Kwisatz utility code for QBO receipt search and workflow cleanup experiments.</p>
+          </div>
+          <span class="repo-link">Open repo →</span>
+        </a>
+        <a class="repo-card" href="https://github.com/punkrocknerdgirl/prngbooks">
+          <div>
+            <p class="repo-label">bookkeeping · website</p>
+            <h3>prngbooks</h3>
+            <p>Public website repo for PRNG Bookkeeping Services.</p>
+          </div>
+          <span class="repo-link">Open repo →</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <hr class="rule" />
+
   <!-- ABOUT -->
   <section class="about-section" id="about">
     <div class="about-inner">
@@ -670,16 +784,12 @@
         <p class="section-eyebrow">// the human behind this</p>
         <h2 class="section-heading" style="margin-bottom:1.25rem;">I build systems from real work, not productivity fantasies.</h2>
         <p>
-          I’ve spent enough years inside small business disasters — blown-up bank feeds, mangled A/R, payroll written on the back of a grease-smeared scale ticket  — that I stopped complaining and started building tools to fix the exact problems I’d already survived.</p>
+          I’ve spent enough years inside small business disasters — blown-up bank feeds, mangled A/R, payroll written on the back of a grease-smeared scale ticket — that I stopped complaining and started building tools to fix the exact problems I’d already survived.
+        </p>
+        <p>Gen-X is officially old now. Hooray. We are <i>thrilled.</i> But, we’ve put enough time in various fields to know where all the bodies are buried. Our entire lives, Gen-X have spent significant time and energy trying to figure out how to get shit done so we can do... nothing. Any shortcut that buys back actual fuck-off-able hours, we will find it.</p>
+        <p>I still write on actual paper. With actual pens. Sometimes even in cursive, on sticky notes I lose and spend twenty minutes on the floor searching for until my knees and back hurt and I need to lie down. But I also watched my dad build Frankenstein computers out of swap meet parts and sheer stubbornness. Not pretty. Completely functional. To eight-year-old me — pure magic.</p>
+        <p>So, come watch an old dog learn new — you know, I’ve never liked that saying. Come or don’t. I don’t give two turtle shits. I’ll just be here doing cool shit. If you want to not be lame, by all means, pull up a chair. If you want to continue being lame, that’s your choice. There’s the door. Tell your mom I said, “hi.” Peace.</p>
 
-<p>Gen-X is officially old now. Hooray. We are <i>thrilled.</i> But, we’ve put enough time in various fields to know where all the bodies are buried. Our entire lives, Gen-X have spent significant time and energy trying to figure out how to get shit done so we can do… nothing.  Any shortcut that buys back actual fuck-off-able hours, we will find it.</p>
-
-<p>I still write on actual paper. With actual pens. Sometimes even in cursive, on sticky notes I lose and spend twenty minutes on the floor searching for until my knees and back hurt and I need to lie down. But I also watched my dad build Frankenstein computers out of swap meet parts and sheer stubbornness. Not pretty. Completely functional. To eight-year-old me — pure magic.</p>
-
-<p>So, come watch an old dog learn new — you know, I’ve never liked that saying. Come or don’t. I don’t give two turtle shits. I’ll just be here doing cool shit. If you want to not be lame, by all means, pull up a chair. If you want to continue being lame, that’s your choice. There’s the door. Tell your mom I said, “hi.” Peace..</p>
-        
-         </p>
-       
         <div class="about-tags">
           <span class="tag">QuickBooks Online</span>
           <span class="tag">Make.com</span>
