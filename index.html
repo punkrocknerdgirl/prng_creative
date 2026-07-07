@@ -172,6 +172,8 @@
     .work-orbit {
       grid-column: 1;
       grid-row: 1;
+      align-self: stretch;
+      display: flex;
       position: relative;
       margin-top: 0.4rem;
       padding: 1px;
@@ -208,6 +210,10 @@
 
     .work-orbit-inner {
       padding: 1.1rem;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
       background: rgba(26,10,18,0.34);
       border: 1px solid rgba(255,255,255,0.08);
     }
@@ -684,7 +690,7 @@
       .hero-copy { grid-column: auto; text-align: left; justify-self: stretch; }
       .hero-sub { margin-left: 0; }
       .hero-buttons { justify-content: flex-start; }
-      .work-orbit { grid-column: auto; grid-row: auto; transform: none; }
+      .work-orbit { grid-column: auto; grid-row: auto; align-self: auto; display: block; transform: none; }
       .split-banner { grid-template-columns: 1fr; }
       .split-panel:last-child { border-left: none; border-top: 2px solid var(--pink); }
       .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
