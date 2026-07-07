@@ -19,6 +19,7 @@
       --ink:        #1A0A12;
       --muted:      #7A5068;
       --rule:       rgba(92,31,59,0.18);
+      --site-width: 1100px;
       --mono: 'Roboto Mono', monospace;
       --body: 'Roboto', sans-serif;
       --display: 'Playfair Display', serif;
@@ -99,7 +100,7 @@
     }
 
     .hero-inner {
-      max-width: 1100px;
+      max-width: var(--site-width);
       margin: 0 auto;
       position: relative;
       display: grid;
@@ -309,7 +310,6 @@
     }
 
     .split-panel {
-      padding: 2.25rem 2.5rem;
       text-decoration: none;
       color: inherit;
       transition: background 0.18s;
@@ -340,6 +340,15 @@
     .split-panel:first-child h2 { color: #fff; }
     .split-panel:last-child  h2 { color: var(--plum); }
 
+    .split-panel-inner {
+      max-width: 550px;
+      padding: 2.25rem 2rem;
+    }
+
+    .split-panel:first-child .split-panel-inner {
+      margin-left: auto;
+    }
+
     .split-panel p {
       font-size: 0.875rem;
       line-height: 1.65;
@@ -361,7 +370,7 @@
     /* ── SECTION BASE ─────────────────────────────────────────── */
     section { padding: 4.5rem 2rem; }
 
-    .section-inner { max-width: 900px; margin: 0 auto; }
+    .section-inner { max-width: var(--site-width); margin: 0 auto; }
 
     .section-eyebrow {
       font-family: var(--mono);
@@ -525,7 +534,6 @@
 
     /* ── GITHUB SHELF ─────────────────────────────────────────── */
     .github-section { background: #fff; }
-    .github-section .section-inner { max-width: 980px; }
 
     .repo-shelf {
       display: grid;
@@ -590,7 +598,7 @@
     }
 
     .about-inner {
-      max-width: 900px;
+      max-width: var(--site-width);
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -770,16 +778,20 @@
   <!-- SPLIT BANNER: workshop / front desk -->
   <div class="split-banner">
     <a class="split-panel" href="#">
-      <p class="panel-label">You are here</p>
-      <h2>The workshop</h2>
-      <p>Systems thinking, build logs, automation experiments, AI field notes, and useful observations from real paid work. No funnels. No SaaS shrine.</p>
-      <span class="panel-arrow">⌁</span>
+      <div class="split-panel-inner">
+        <p class="panel-label">Site map</p>
+        <h2>The workshop</h2>
+        <p>Systems thinking, build logs, automation experiments, AI field notes, and useful observations from real paid work. No funnels. No SaaS shrine.</p>
+        <span class="panel-arrow">⌁</span>
+      </div>
     </a>
     <a class="split-panel" href="https://prngbooks.com">
-      <p class="panel-label">Need bookkeeping?</p>
-      <h2>The front desk →</h2>
-      <p>PRNG Bookkeeping Services. QBO cleanup, payroll, A/R, A/P, reporting, and financial operations for small businesses.</p>
-      <span class="panel-arrow">→</span>
+      <div class="split-panel-inner">
+        <p class="panel-label">Need bookkeeping?</p>
+        <h2>The front desk →</h2>
+        <p>PRNG Bookkeeping Services. QBO cleanup, payroll, A/R, A/P, reporting, and financial operations for small businesses.</p>
+        <span class="panel-arrow">→</span>
+      </div>
     </a>
   </div>
 
@@ -788,7 +800,6 @@
   <!-- WHAT LIVES HERE -->
   <section class="what-section" id="what">
     <div class="section-inner">
-      <p class="section-eyebrow">// site map</p>
       <h2 class="section-heading">What lives here</h2>
       <p class="section-body">
         Not a blog. Not a brand platform. More like a public notebook for a working adult who builds things, breaks things, and writes it down.
