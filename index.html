@@ -109,6 +109,7 @@
     }
 
     .hero-copy {
+      grid-column: 2;
       max-width: 780px;
       text-align: right;
       justify-self: end;
@@ -169,6 +170,8 @@
     .btn-ghost:hover { border-color: var(--pink); color: var(--pink); }
 
     .work-orbit {
+      grid-column: 1;
+      grid-row: 1;
       position: relative;
       margin-top: 0.4rem;
       padding: 1px;
@@ -678,10 +681,10 @@
     @media (max-width: 680px) {
       .hero { padding-top: 4rem; }
       .hero-inner { grid-template-columns: 1fr; gap: 2rem; }
-      .hero-copy { text-align: left; justify-self: stretch; }
+      .hero-copy { grid-column: auto; text-align: left; justify-self: stretch; }
       .hero-sub { margin-left: 0; }
       .hero-buttons { justify-content: flex-start; }
-      .work-orbit { transform: none; }
+      .work-orbit { grid-column: auto; grid-row: auto; transform: none; }
       .split-banner { grid-template-columns: 1fr; }
       .split-panel:last-child { border-left: none; border-top: 2px solid var(--pink); }
       .about-inner { grid-template-columns: 1fr; gap: 2.5rem; }
