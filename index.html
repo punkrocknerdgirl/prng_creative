@@ -523,17 +523,19 @@
     .repo-shelf {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 1rem;
+      grid-auto-rows: minmax(230px, auto);
+      align-items: stretch;
+      gap: 1.25rem;
     }
 
     .repo-card {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 190px;
+      min-height: 230px;
       border: 1px solid var(--rule);
       border-top: 3px solid var(--pink);
-      padding: 1.35rem;
+      padding: 1.65rem 1.35rem;
       color: inherit;
       text-decoration: none;
       background: linear-gradient(135deg, rgba(250,234,243,0.78), rgba(255,255,255,0.92));
@@ -572,7 +574,7 @@
       letter-spacing: 0.08em;
       text-transform: uppercase;
       color: var(--plum);
-      margin-top: 1.1rem;
+      margin-top: 2rem;
     }
 
     /* ── ABOUT STRIP ──────────────────────────────────────────── */
